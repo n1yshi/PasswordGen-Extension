@@ -382,38 +382,6 @@ When reporting bugs or requesting features:
    - Feature requests: `enhancement` label
    - Documentation: `documentation` label
 
-## 📋 Roadmap
-
-### Planned Features
-
-#### Version 1.1
-- [ ] Password history (optional, encrypted local storage)
-- [ ] Bulk password generation
-- [ ] Custom character set definitions
-- [ ] Passphrase generation option
-- [ ] Export/import settings
-
-#### Version 1.2
-- [ ] Multi-language support
-- [ ] Advanced strength analysis with detailed feedback
-- [ ] Password breach checking integration
-- [ ] Custom strength requirements
-- [ ] Keyboard shortcut customization
-
-#### Version 2.0
-- [ ] Sync settings across devices
-- [ ] Password manager integration
-- [ ] Advanced auto-fill with form detection
-- [ ] Enterprise features and policies
-- [ ] API for third-party integrations
-
-### Long-term Goals
-- Cross-browser compatibility (Firefox, Safari)
-- Mobile browser support
-- Integration with popular password managers
-- Advanced security features and compliance
-- Community-driven feature development
-
 ## 🐛 Troubleshooting
 
 ### Common Issues
