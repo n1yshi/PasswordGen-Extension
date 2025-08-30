@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="https://api.iconify.design/material-symbols:lock.svg?color=%2360a5fa&width=24&height=24" alt="Lock Icon" width="24" height="24">
+                <h1>SecurePass</h1>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                <img src="https://api.iconify.design/material-symbols:light-mode.svg?color=%2394a3b8&width=20&height=20" alt="Theme Toggle" width="20" height="20" id="themeIcon">
+            </button>
+        </header>
+
+        <div class="password-section">
+            <div class="password-display">
+                <input type="text" id="passwordOutput" readonly placeholder="Generated password will appear here">
+                <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+                    <img src="https://api.iconify.design/material-symbols:content-copy.svg?color=%23ffffff&width=18&height=18" alt="Copy" width="18" height="18">
+                </button>
+            </div>
+            
+            <div class="strength-indicator">
+                <div class="strength-bar">
+                    <div class="strength-fill" id="strengthFill"></div>
+                </div>
+                <span class="strength-text" id="strengthText">Weak</span>
+            </div>
+            
+            <div class="crack-time-section">
+                <div class="crack-time-header">
+                    <img src="https://api.iconify.design/material-symbols:timer.svg?color=%2360a5fa&width=16&height=16" alt="Timer" width="16" height="16">
+                    <span>Time to crack:</span>
+                </div>
+                <div class="crack-time-display">
+                    <span id="crackTime">Calculating...</span>
+                </div>
+                <div class="crack-scenarios">
+                    <div class="scenario">
+                        <span class="scenario-label">Online attack:</span>
+                        <span class="scenario-time" id="onlineTime">-</span>
+                    </div>
+                    <div class="scenario">
+                        <span class="scenario-label">Offline attack:</span>
+                        <span class="scenario-time" id="offlineTime">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="length-control">
+                <label for="lengthSlider">Length: <span id="lengthValue">16</span></label>
+                <input type="range" id="lengthSlider" min="4" max="50" value="16" class="slider">
+            </div>
+
+            <div class="options">
+                <div class="option">
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Uppercase letters (A-Z)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Lowercase letters (a-z)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Numbers (0-9)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="symbols" checked>
+                    <label for="symbols">Symbols (!@#$%^&*)</label>
+                </div>
+                <div class="option">
+                    <input type="checkbox" id="excludeSimilar">
+                    <label for="excludeSimilar">Exclude similar characters</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="generate-btn" id="generateBtn">
+                <img src="https://api.iconify.design/material-symbols:refresh.svg?color=%23ffffff&width=18&height=18" alt="Generate" width="18" height="18">
+                Generate New Password
+            </button>
+            <button class="fill-btn" id="fillBtn">
+                <img src="https://api.iconify.design/material-symbols:edit.svg?color=%23f1f5f9&width=18&height=18" alt="Fill" width="18" height="18">
+                Fill into Form
+            </button>
+        </div>
+
+        <div class="toast" id="toast">
+            <span id="toastMessage">Password copied!</span>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
